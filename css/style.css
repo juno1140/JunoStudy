@@ -111,14 +111,14 @@ header h1 a {
     }
 
     /* main */
-    .home main {
+    main {
         background: url(../images/DL.jpg) center center / cover no-repeat;
-        height: 98vh;
+        min-height: 98vh;
     }
-    .home main .opacity {
+    main .opacity {
         background: rgba(255,255,255, 0.6);
         position: relative;
-        height: 100%;
+        min-height: 98vh;
     }
     .home main .opacity div h1 {
         margin: 0;
@@ -168,11 +168,65 @@ header h1 a {
     }
 
     /* footer */
-    .home main .opacity footer {
+    main .opacity footer {
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
         bottom: 10px;
+    }
+
+
+    /* introduction */
+    .introduction main .opacity h1 {
+        margin: 0;
+        padding: 50px;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .introduction main .opacity .info {
+        padding-bottom: 200px;
+    }
+    .introduction main .opacity .info .left-side {
+        width: 200px;
+        margin: auto;
+    }
+    .introduction main .opacity .info .left-side img {
+        width: 200px;
+    }
+    .introduction main .opacity .info .left-side p {
+        padding-top: 10px;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .introduction main .opacity .info .right-side {
+        margin-top: 30px;
+    }
+    .introduction main .opacity .info .right-side h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .introduction main .opacity .info .right-side dl {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 20px 0;
+    }
+    .introduction main .opacity .info .right-side dt {
+        /* float: left; */
+        padding: 10px 0;
+    }
+    .introduction main .opacity .info .right-side dd {
+        /* margin-left: 75px; */
+        /* padding-bottom: 10px; */
+    }
+    .introduction main .opacity .info .right-side .twitter p {
+        text-align: center;
+        margin-top: 50px;
+        padding-bottom: 20px;
+        font-size: 1.2rem;
+    }
+    .introduction main .opacity .info .right-side .twitter a img {
+        display: block;
+        margin: 0 auto;
     }
 }
 
@@ -234,11 +288,11 @@ header h1 a {
     }
 
     /* main */
-    .home main {
+    main {
         background: url(../images/DL.jpg) center center / cover no-repeat;
         min-height: 93.5vh;
     }
-    .home main .opacity {
+    main .opacity {
         background: rgba(255,255,255, 0.6);
         min-height: 93.5vh;
         position: relative;
@@ -302,10 +356,60 @@ header h1 a {
     }
 
     /* footer */
-    .home main .opacity footer {
+    main .opacity footer {
+        display: flex;
         position: absolute;
         right: 10px;
         bottom: 10px;
         font-size: 1.5rem;
+    }
+
+
+    /* introduction */
+    .introduction main .opacity h1 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding: 80px 0;
+        font-size: 4rem;
+    }
+    .introduction main .opacity .info {
+        display: flex;
+        margin: 0 10vw;
+        padding-bottom: 100px;
+    }
+    .introduction main .opacity .info .left-side {
+        margin-right: 10vw;
+    }
+    .introduction main .opacity .info .left-side p {
+        text-align: center;
+        padding-top: 15px;
+        font-size: 3.0rem;
+    }
+    .introduction main .opacity .info .right-side h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    .introduction main .opacity .info .right-side dl {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+    .introduction main .opacity .info .right-side dt {
+        float: left;
+        padding-bottom: 30px;
+    }
+    .introduction main .opacity .info .right-side dd {
+        margin-left: 120px;
+        padding-bottom: 30px;
+    }
+    .introduction main .opacity .info .right-side .twitter {
+        display: flex;
+    }
+    .introduction main .opacity .info .right-side .twitter p {
+        padding: 5px 10px 0 0;
+        font-size: 2rem;
+    }
+    .introduction main .opacity .info .right-side .twitter a:hover {
+        opacity: 0.8;
     }
 }
