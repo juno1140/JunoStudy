@@ -5,18 +5,16 @@
     padding: 0;
 }
 html {
-    /* border: red 1px solid; */
     font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
     font-size: 62.5%;
 }
 body {
-    /* border: blue 1px solid; */
     z-index: 100;
 }
 
 /* header */
 header {
-    background-color: #ffdfc0;
+    background-color: #FFEAD7;
     display: flex;
 }
 header h1 {
@@ -112,7 +110,7 @@ header h1 a {
 
     /* main */
     main {
-        background: url(../images/DL.jpg) center center / cover no-repeat;
+        background: url(../images/background.jpg) center center / cover no-repeat;
         min-height: 98vh;
     }
     main .opacity {
@@ -211,12 +209,7 @@ header h1 a {
         margin: 20px 0;
     }
     .introduction main .opacity .info .right-side dt {
-        /* float: left; */
         padding: 10px 0;
-    }
-    .introduction main .opacity .info .right-side dd {
-        /* margin-left: 75px; */
-        /* padding-bottom: 10px; */
     }
     .introduction main .opacity .info .right-side .twitter p {
         text-align: center;
@@ -228,6 +221,70 @@ header h1 a {
         display: block;
         margin: 0 auto;
     }
+
+    /* book */
+    .book main {
+        background: url(../images/background.jpg) center center / cover no-repeat;
+    }
+    .book main .opacity {
+        background: rgba(255,255,255, 0.6);
+        padding: 50px 0;
+        position: relative;
+    }
+    .bookinfo {
+        padding: 0 20px;
+        background-color: #fff;
+    }
+    .bookinfo .info-top .book_image {
+        padding-top: 50px;
+    }
+    .bookinfo .info-top .book_image img {
+        display: block;
+        margin: auto;
+    }
+    .bookinfo .info-top .book_baseinfo h2 {
+        padding-top: 30px;
+        font-size: 1.8rem;
+        text-align: center;
+        padding-bottom: 5px;
+        border-bottom: #000 1px solid;
+    }
+    .bookinfo .info-top .book_baseinfo dl {
+        list-style-type: none;
+        font-size: 1.5rem;
+        padding-top: 30px;
+    }
+    .bookinfo .info-top .book_baseinfo dt {
+        float: left;
+        padding: 0 10px 20px 0;
+    }
+    .bookinfo .info-top .book_baseinfo dt::after {
+        content: '：';
+    }
+    .bookinfo .info-top .book_baseinfo dt:last-child::after {
+        content: none;
+    }
+    .bookinfo .info-top .book_baseinfo dd {
+        padding: 0 10px 20px 0;
+    }
+    .bookinfo .info-top .book_baseinfo dd:last-child {
+        word-wrap: break-word;
+        padding-left: 100px;
+    }
+
+    .bookinfo .book_description {
+        padding: 50px 5vw;
+    }
+    .bookinfo .book_description h2 {
+        text-align: center;
+        font-size: 2rem;
+        padding-bottom: 30px;
+    }
+    .bookinfo .book_description p {
+        font-family: serif;
+        font-size: 1.5rem;
+        line-height: 2;
+    }
 }
 
 
@@ -235,6 +292,9 @@ header h1 a {
 @media screen and (min-width: 1025px) {
 
     /* header */
+    header {
+        min-height: 6.5vh;
+    }
     header h1 {
         margin: 10px 20px;
         font-size: 3.0rem;
@@ -288,11 +348,14 @@ header h1 a {
     }
 
     /* main */
-    main {
-        background: url(../images/DL.jpg) center center / cover no-repeat;
+    .home main,
+    .introduction main {
+        background: url(../images/background.jpg) center center / cover no-repeat;
         min-height: 93.5vh;
+        
     }
-    main .opacity {
+    .home main .opacity,
+    .introduction main .opacity {
         background: rgba(255,255,255, 0.6);
         min-height: 93.5vh;
         position: relative;
@@ -357,7 +420,6 @@ header h1 a {
 
     /* footer */
     main .opacity footer {
-        display: flex;
         position: absolute;
         right: 10px;
         bottom: 10px;
@@ -411,5 +473,76 @@ header h1 a {
     }
     .introduction main .opacity .info .right-side .twitter a:hover {
         opacity: 0.8;
+    }
+
+    /* book */
+    .book main {
+        background: url(../images/background.jpg) center center / cover no-repeat;
+        /* padding-top: 50px; */
+        /* min-height: 93.5vh; */
+        /* height: 100%; */
+        /* position: relative; */
+        background-attachment: fixed;
+    }
+    .book main .opacity {
+        background: rgba(255,255,255, 0.6);
+        padding: 50px 0;
+        /* min-height: 93.5vh; */
+        /* height: 100%; */
+        position: relative;
+        background-attachment: fixed;
+    }
+    .bookinfo {
+        /* position: relative; */
+        width: 80%;
+        top: 50px;
+        margin: auto;
+        padding: 100px 50px;
+        background-color: #fff;
+    }
+    .bookinfo .info-top {
+        display: flex;
+    }
+    .bookinfo .info-top .book_image {
+        padding: 0 5vw;
+    }
+    .bookinfo .info-top .book_image img {
+        box-shadow: #000 5px 5px 5px;
+    }
+    .bookinfo .info-top .book_baseinfo h2 {
+        font-size: 2.3rem;
+        padding-bottom: 5px;
+        border-bottom: #000 2px solid;
+    }
+    .bookinfo .info-top .book_baseinfo dl {
+        list-style-type: none;
+        font-size: 2rem;
+        padding-top: 60px;
+    }
+    .bookinfo .info-top .book_baseinfo dt {
+        float: left;
+        padding: 0 10px 30px 0;
+    }
+    .bookinfo .info-top .book_baseinfo dt::after {
+        content: '：';
+    }
+    .bookinfo .info-top .book_baseinfo dt:last-child::after {
+        content: none;
+    }
+    .bookinfo .info-top .book_baseinfo dd {
+        word-wrap: break-word;
+        padding: 0 10px 30px 0;
+    }
+    .bookinfo .book_description {
+        padding: 50px 5vw;
+    }
+    .bookinfo .book_description h2 {
+        font-size: 2.5rem;
+        padding-bottom: 50px;
+    }
+    .bookinfo .book_description p {
+        font-family: serif;
+        font-size: 2rem;
+        line-height: 2.5;
     }
 }
