@@ -4,7 +4,7 @@
     <!-- 文字コード指定 -->
     <meta charset="UTF-8">
     <!-- タイトル -->
-    <title>JUNO's Books | Home</title>
+    <title>JUNO's Books | About me</title>
     <!-- ページ概要 -->
     <meta name="description" content="当サイトではJUNOが読んだ本を紹介しています。">
     <!-- スマートフォン対応 -->
@@ -12,8 +12,8 @@
     <!-- IE最適化 -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- OGP(SNS連携) -->
-    <meta property="og:url" content="https://www.junosbooks.xyz">
-    <meta property="og:title" content="JUNO's Books | Home">
+    <meta property="og:url" content="https://www.junosbooks.xyz/introduction.html">
+    <meta property="og:title" content="JUNO's Books | About me">
     <meta property="og:description" content="当サイトではJUNOが読んだ本を紹介しています。">
     <meta property="og:image" content="./images/my_phote180.jpg">
     <!-- CSS -->
@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="./lib/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/style.css">
     <!-- ファビコン -->
-    <link rel="shortcut icon" href="./my_phote.ico">
+    <link rel="icon" href="./my_phote.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./images/my_phote180.jpg">
 </head>
-<body class="home">
+<body class="introduction">
     <header>
         <h1><a href="./index.html">JUNO's Books</a></h1>
         <div id="nav_toggle">
@@ -38,23 +38,33 @@
         <nav>
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./introduction.html">About me</a></li>
+                <li><a href="">About me</a></li>
                 <li><a href="https://twitter.com/Juno1140" target="_blank">Twitter</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="opacity">
-            <div>
-                <h1>書籍一覧</h1>
-                <p>JUNOが読んだ書籍を紹介しています。</p>
+            <h1>About me</h1>
+            <div class="info">
+                <div class="left-side">
+                    <img src="./images/my_phote.jpg" alt="juno">
+                    <p>JUNO</p>
+                </div>
+                <div class="right-side">
+                    <h2>エンジニア経歴</h2>
+                    <dl>
+                        <dt>2017.7</dt><dd>新卒でエンジニアになる</dd>
+                        <dt>2017.9</dt><dd>社内システムエンジニア(PHP/Laravel)</dd>
+                        <dt>2018.10</dt><dd>Excel入力作業・Excel-VBAエンジニア</dd>
+                        <dt>2019.4</dt><dd>再びPHPエンジニア<br>独学でWebサイト制作を始める。</dd>
+                    </dl>
+                    <div class="twitter">
+                        <p>Twitterをやっています。お気軽にフォローしてください！</p>
+                        <a href="https://twitter.com/Juno1140" target="_blank"><img src="./images/Twitter_Social_Icon_Square_Color.png" alt="twitter"></a>
+                    </div>
+                </div>
             </div>
-            <ul class="slider">
-                <li><a href="./bookinfo/book1.html"><img src="./images/book_img/html.jpg" alt="html5css3"></a></li>
-                <li><a href="./bookinfo/book2.html"><img src="./images/book_img/ai.jpg" alt="ai"></a></li>
-                <li><a href="./bookinfo/book3.html"><img src="./images/book_img/git.jpg" alt="git"></a></li>
-                <li><a href="./bookinfo/book4.html"><img src="./images/book_img/webpro.jpg" alt="webpro"></a></li>
-            </ul>
             <footer>
                 <small>&copy; JUNO. All rights reserved.</small>
             </footer>

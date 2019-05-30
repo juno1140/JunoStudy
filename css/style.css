@@ -1,1 +1,548 @@
 @charset "UTF-8";
+/* 端末共通 */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 62.5%;
+}
+body {
+    z-index: 100;
+}
+
+/* header */
+header {
+    background-color: #FFEAD7;
+    display: flex;
+}
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia;
+    font-style: italic;
+}
+header h1 a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* スマホ */
+@media screen and (max-width: 1024px) {
+
+    /* header */
+    header h1 {
+        margin: 10px 20px;
+        font-size: 2.5rem;
+    }
+    /* ハンバーガーメニュー */
+    header #nav_toggle {
+        margin-left: auto;
+        display: block;
+		width: 30px;
+		height: 30px;
+		position: relative;
+        top: 12px;
+        right: 10px;
+    }
+    header #nav_toggle div {
+        position: relative;
+    }
+    header #nav_toggle div span {
+        display: block;
+        height: 3px;
+        background: #555;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        transition: 0.5s ease-in-out;
+    }
+    header #nav_toggle div span:nth-child(1) {
+        top: 0;
+    }
+    header #nav_toggle div span:nth-child(2) {
+        top: 10px;
+    }
+    header #nav_toggle div span:nth-child(3) {
+        top: 20px;
+    }
+    /*開閉ボタンopen時*/
+	.open #nav_toggle span:nth-child(1) {
+        top: 12px;
+        transform: rotate(135deg);
+    }
+    .open #nav_toggle span:nth-child(2) {
+        width: 0;
+        left: 50%;
+    }
+    .open #nav_toggle span:nth-child(3) {
+        top: 12px;
+        transform: rotate(-135deg);
+    }
+    header nav {
+        display: none;
+		position: absolute;
+		top: 47px;
+		width: 100%;
+		background: #FFEAD7;
+        left: 0;
+        z-index: 99;
+    }
+    header nav ul {
+        display: block;
+        margin: auto;
+        width: 90%;
+        font-size: 2.0rem;
+    }
+    header nav ul li {
+        padding: 15px 0;
+        list-style-type: none;
+        text-align: center;
+        border-top: 2px solid #fff;
+    }
+    header nav ul li a,
+    header nav ul li a:link,
+    header nav ul li a:visited {
+        color: #000;
+        text-decoration: none;
+    }
+
+    /* main */
+    main {
+        background: url(../images/background.jpg) center center / cover no-repeat;
+        min-height: 98vh;
+    }
+    main .opacity {
+        background: rgba(255,255,255, 0.6);
+        position: relative;
+        min-height: 98vh;
+    }
+    .home main .opacity div h1 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding: 50px 0 30px 0;
+        font-size: 3rem;
+    }
+    .home main .opacity div p {
+        text-align: center;
+        padding: 0 0 40px 0;
+        font-size: 1.5rem;
+    }
+    /* スライダー */
+    .home main .opacity .slider {
+        list-style-type: none;
+        margin: auto;  /* margin: 0 autoと同様 */
+        position: relative;
+        display: flex;
+    }
+    .home main .opacity .slider li {
+        margin: 0 3vw;
+    }
+    .home main .opacity .slider li img {
+        width: 100%;
+    }
+    .home main .opacity .slider button {
+        outline: none; /* hover時の効果を無効にする(アウトラインに色がつく効果無効) */
+    }
+    .home main .opacity .slider .prev-arrow {
+        width: 12vw;
+        background: #000;
+        opacity: 0.5;
+    }
+    .home main .opacity .slider .prev-arrow::after {
+        content: '<';
+        color: #fff;
+    }
+    .home main .opacity .slider .next-arrow {
+        width: 12vw;
+        background: #000;
+        opacity: 0.5;
+    }
+    .home main .opacity .slider .next-arrow::after {
+        content: '>';
+        color: #fff;
+    }
+
+    /* footer */
+    main .opacity footer {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: 10px;
+    }
+
+
+    /* introduction */
+    .introduction main .opacity h1 {
+        margin: 0;
+        padding: 50px;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .introduction main .opacity .info {
+        padding-bottom: 200px;
+    }
+    .introduction main .opacity .info .left-side {
+        width: 200px;
+        margin: auto;
+    }
+    .introduction main .opacity .info .left-side img {
+        width: 200px;
+    }
+    .introduction main .opacity .info .left-side p {
+        padding-top: 10px;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .introduction main .opacity .info .right-side {
+        margin-top: 30px;
+    }
+    .introduction main .opacity .info .right-side h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    .introduction main .opacity .info .right-side dl {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 20px 0;
+    }
+    .introduction main .opacity .info .right-side dt {
+        padding: 10px 0;
+    }
+    .introduction main .opacity .info .right-side .twitter p {
+        text-align: center;
+        margin-top: 50px;
+        padding-bottom: 20px;
+        font-size: 1.2rem;
+    }
+    .introduction main .opacity .info .right-side .twitter a img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* book */
+    .book main {
+        background: url(../images/background.jpg) center center / cover no-repeat;
+    }
+    .book main .opacity {
+        background: rgba(255,255,255, 0.6);
+        padding: 50px 0;
+        position: relative;
+    }
+    .bookinfo {
+        padding: 0 20px;
+        background-color: #fff;
+    }
+    .bookinfo .info-top .book_image {
+        padding-top: 50px;
+    }
+    .bookinfo .info-top .book_image img {
+        display: block;
+        margin: auto;
+    }
+    .bookinfo .info-top .book_baseinfo h2 {
+        padding-top: 30px;
+        font-size: 1.8rem;
+        text-align: center;
+        padding-bottom: 5px;
+        border-bottom: #000 1px solid;
+    }
+    .bookinfo .info-top .book_baseinfo dl {
+        list-style-type: none;
+        font-size: 1.5rem;
+        padding-top: 30px;
+    }
+    .bookinfo .info-top .book_baseinfo dt {
+        float: left;
+        padding: 0 10px 20px 0;
+    }
+    .bookinfo .info-top .book_baseinfo dt::after {
+        content: '：';
+    }
+    .bookinfo .info-top .book_baseinfo dt:last-child::after {
+        content: none;
+    }
+    .bookinfo .info-top .book_baseinfo dd {
+        padding: 0 10px 20px 0;
+    }
+    .bookinfo .info-top .book_baseinfo dd:last-child {
+        word-wrap: break-word;
+        padding-left: 100px;
+    }
+
+    .bookinfo .book_description {
+        padding: 50px 5vw;
+    }
+    .bookinfo .book_description h2 {
+        text-align: center;
+        font-size: 2rem;
+        padding-bottom: 30px;
+    }
+    .bookinfo .book_description p {
+        font-family: serif;
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+}
+
+
+/* PC */
+@media screen and (min-width: 1025px) {
+
+    /* header */
+    header {
+        min-height: 6.5vh;
+    }
+    header h1 {
+        margin: 10px 20px;
+        font-size: 3.0rem;
+    }
+    header #nav_toggle {
+        display: none;
+    }
+    header nav {
+        margin-left: auto;
+    }
+    header nav ul {
+        display: flex;
+        list-style-type: none;
+        height: 100%;
+    }
+    header nav ul li {
+        margin-right: 30px;
+    }
+    header nav ul li a {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-40%);
+        font-size: 1.8rem;
+    }
+    header nav ul a,
+    header nav ul a:link,
+    header nav ul a:visited {
+        text-decoration: none;
+        color: #000;
+        display: inline-block;
+        position: relative;
+    }
+    header nav ul a:hover {
+        color: #f528cd;
+    }
+    /* hover時のアニメーション */
+    header nav ul a::after {
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #f528cd;
+        transform: scale(0, 1);
+        transform-origin: center top;
+        transition: .3s;
+    }
+    header nav ul a:hover::after {
+        transform: scale(1, 1);
+    }
+
+    /* main */
+    .home main,
+    .introduction main {
+        background: url(../images/background.jpg) center center / cover no-repeat;
+        min-height: 93.5vh;
+        
+    }
+    .home main .opacity,
+    .introduction main .opacity {
+        background: rgba(255,255,255, 0.6);
+        min-height: 93.5vh;
+        position: relative;
+    }
+    .home main .opacity div h1 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding: 80px 0 50px 0;
+        font-size: 4rem;
+    }
+    .home main .opacity div p {
+        text-align: center;
+        padding: 0 0 50px 0;
+        font-size: 1.8rem;
+    }
+    
+    .home main .opacity .slider {
+        list-style-type: none;
+        width: 80%;
+        margin: auto;  /* margin: 0 autoと同様 */
+        position: relative;
+    }
+    .home main .opacity .slider li {
+        margin: 0 5vw;
+    }
+    .home main .opacity .slider li img {
+        width: 100%;
+        transition: all 0.3s linear;
+        box-shadow: 15px 15px 15px #333;
+    }
+    .home main .opacity .slider li img:hover {
+        transform: scale(1.1);
+    }
+    .home main .opacity .slider button {
+        background: none;
+        outline: none;
+    }
+    .home main .opacity .slider .prev-arrow {
+        left: -3vw;
+        width: 0;
+        height: 0;
+        border-left: 0 solid transparent;
+        border-right: 3vw solid #ea6555;
+        border-top: 2vw solid transparent;
+        border-bottom: 2vw solid transparent;
+    }
+    .home main .opacity .slider .next-arrow {
+        right: -3vw;
+        width: 0;
+        height: 0;
+        border-left: 3vw solid #ea6555;
+        border-right: 0 solid transparent;
+        border-top: 2vw solid transparent;
+        border-bottom: 2vw solid transparent;
+    }
+    .home main .opacity .slider .slide-arrow {
+        position: absolute;
+        top: 50%;
+        margin-top: -70px;
+    }
+
+    /* footer */
+    main .opacity footer {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+
+    /* introduction */
+    .introduction main .opacity h1 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding: 80px 0;
+        font-size: 4rem;
+    }
+    .introduction main .opacity .info {
+        display: flex;
+        margin: 0 10vw;
+        padding-bottom: 100px;
+    }
+    .introduction main .opacity .info .left-side {
+        margin-right: 10vw;
+    }
+    .introduction main .opacity .info .left-side p {
+        text-align: center;
+        padding-top: 15px;
+        font-size: 3.0rem;
+    }
+    .introduction main .opacity .info .right-side h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    .introduction main .opacity .info .right-side dl {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+    .introduction main .opacity .info .right-side dt {
+        float: left;
+        padding-bottom: 30px;
+    }
+    .introduction main .opacity .info .right-side dd {
+        margin-left: 120px;
+        padding-bottom: 30px;
+    }
+    .introduction main .opacity .info .right-side .twitter {
+        display: flex;
+    }
+    .introduction main .opacity .info .right-side .twitter p {
+        padding: 5px 10px 0 0;
+        font-size: 2rem;
+    }
+    .introduction main .opacity .info .right-side .twitter a:hover {
+        opacity: 0.8;
+    }
+
+    /* book */
+    .book main {
+        background: url(../images/background.jpg) center center / cover no-repeat;
+        /* padding-top: 50px; */
+        /* min-height: 93.5vh; */
+        /* height: 100%; */
+        /* position: relative; */
+        background-attachment: fixed;
+    }
+    .book main .opacity {
+        background: rgba(255,255,255, 0.6);
+        padding: 50px 0;
+        /* min-height: 93.5vh; */
+        /* height: 100%; */
+        position: relative;
+        background-attachment: fixed;
+    }
+    .bookinfo {
+        /* position: relative; */
+        width: 80%;
+        top: 50px;
+        margin: auto;
+        padding: 100px 50px;
+        background-color: #fff;
+    }
+    .bookinfo .info-top {
+        display: flex;
+    }
+    .bookinfo .info-top .book_image {
+        padding: 0 5vw;
+    }
+    .bookinfo .info-top .book_image img {
+        box-shadow: #000 5px 5px 5px;
+    }
+    .bookinfo .info-top .book_baseinfo h2 {
+        font-size: 2.3rem;
+        padding-bottom: 5px;
+        border-bottom: #000 2px solid;
+    }
+    .bookinfo .info-top .book_baseinfo dl {
+        list-style-type: none;
+        font-size: 2rem;
+        padding-top: 60px;
+    }
+    .bookinfo .info-top .book_baseinfo dt {
+        float: left;
+        padding: 0 10px 30px 0;
+    }
+    .bookinfo .info-top .book_baseinfo dt::after {
+        content: '：';
+    }
+    .bookinfo .info-top .book_baseinfo dt:last-child::after {
+        content: none;
+    }
+    .bookinfo .info-top .book_baseinfo dd {
+        word-wrap: break-word;
+        padding: 0 10px 30px 0;
+    }
+    .bookinfo .book_description {
+        padding: 50px 5vw;
+    }
+    .bookinfo .book_description h2 {
+        font-size: 2.5rem;
+        padding-bottom: 50px;
+    }
+    .bookinfo .book_description p {
+        font-family: serif;
+        font-size: 2rem;
+        line-height: 2.5;
+    }
+}
